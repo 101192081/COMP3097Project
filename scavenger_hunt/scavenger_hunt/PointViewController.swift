@@ -9,7 +9,14 @@
 import UIKit
 
 class PointViewController: UIViewController {
-
+    @IBOutlet weak var lblTag: UILabel!
+    @IBOutlet weak var btnShare: UIButton!
+    
+   // @IBOutlet weak var mkMap: MKMapView!
+    @IBOutlet weak var lblPointNaame: UILabel!
+    @IBOutlet weak var rating: RatingControl!
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblTask: UILabel!
     @IBOutlet var btnPoints: UIButton!
     @IBAction func btnPointsOnPress(_ sender: Any) {
         performSegue(withIdentifier: "PointtoPointsLstSegue", sender: self)

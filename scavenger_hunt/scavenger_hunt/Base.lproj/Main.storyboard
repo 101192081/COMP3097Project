@@ -63,6 +63,9 @@
                                     <segment title="Hard"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="btnTagOnChange:" destination="Klv-z0-CRR" eventType="valueChanged" id="bNd-Ze-BSI"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YtS-kf-fGj">
                                 <rect key="frame" x="161" y="359" width="205" height="31"/>
@@ -123,6 +126,10 @@
                     <connections>
                         <outlet property="btnCencel" destination="IwR-xI-Hvy" id="NaP-Dx-XeU"/>
                         <outlet property="btnCreatePoint" destination="92o-3M-ySp" id="nvj-2a-3z0"/>
+                        <outlet property="btnTag" destination="LOc-3J-Q5Q" id="7Tu-96-E3G"/>
+                        <outlet property="txtAddress" destination="YtS-kf-fGj" id="pDl-GJ-bdD"/>
+                        <outlet property="txtName" destination="tdP-dd-RSt" id="pZT-1J-wbK"/>
+                        <outlet property="txtTask" destination="hdf-rZ-vCc" id="qzx-OB-dcE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ReturntoPSegue" animates="NO" id="Oeq-bt-Jid"/>
                     </connections>
                 </viewController>
@@ -163,7 +170,6 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnTeaOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Avt-tw-ph6"/>
                                             <action selector="btnTeamOnPress:" destination="7MF-Sp-FZ2" eventType="touchUpInside" id="t02-9h-WH1"/>
                                         </connections>
                                     </button>
@@ -177,7 +183,6 @@
                                         </state>
                                         <connections>
                                             <action selector="btnAboutOnPress:" destination="7MF-Sp-FZ2" eventType="touchUpInside" id="BJE-C7-jtD"/>
-                                            <action selector="btnAboutOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bra-P8-1IA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -264,7 +269,15 @@
                         <outlet property="NameRatingView" destination="ush-QH-JiA" id="crp-jI-2k6"/>
                         <outlet property="btnAbout" destination="plR-I8-eHw" id="AoZ-jV-BEG"/>
                         <outlet property="btnPoints" destination="zW9-Ma-efb" id="XnZ-iZ-cxk"/>
+                        <outlet property="btnShare" destination="guj-7x-Zxb" id="fkN-zz-0jG"/>
                         <outlet property="btnTeam" destination="obj-He-aUp" id="gyf-1L-dlK"/>
+                        <outlet property="lblAddress" destination="g2v-OL-dzg" id="HxP-LS-4CZ"/>
+                        <outlet property="lblPointNaame" destination="jLI-eK-Wyf" id="bu5-c9-tse"/>
+                        <outlet property="lblTag" destination="i8t-8W-CBR" id="pFD-1H-RLU"/>
+                        <outlet property="lblTask" destination="nq4-0K-E45" id="Rfc-fu-X0F"/>
+                        <outlet property="map" destination="Dfn-xo-Xdg" id="jim-NA-7i9"/>
+                        <outlet property="mkMap" destination="Dfn-xo-Xdg" id="Fne-2U-Icd"/>
+                        <outlet property="rating" destination="xbK-5y-7WG" id="zOk-8c-t7E"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PointtoPointsLstSegue" animates="NO" id="etM-QT-9LR"/>
                         <segue destination="WVU-lF-3gY" kind="show" identifier="PointtoTeamSegue" animates="NO" id="WqE-mv-Gi4"/>
                         <segue destination="OzT-MM-Hhz" kind="show" identifier="PointtoAboutSegue" animates="NO" id="b8R-Xf-jV4"/>
@@ -385,6 +398,7 @@
                                         <connections>
                                             <outlet property="lblPointName" destination="ayW-SB-Q8w" id="rs2-DP-OaJ"/>
                                             <outlet property="lblTag" destination="8wc-oB-NL5" id="1ld-yv-rbn"/>
+                                            <outlet property="ratingControl" destination="CeQ-fg-gDu" id="yer-gO-8jZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -402,6 +416,7 @@
                         <outlet property="btnPoints" destination="Kve-0Y-MaL" id="YUO-PZ-Teq"/>
                         <outlet property="btnTeam" destination="hr7-hO-5DA" id="S7i-z4-J9I"/>
                         <outlet property="pointsTableView" destination="KhM-zv-L9K" id="5FP-nw-9SP"/>
+                        <outlet property="txtSearch" destination="1uU-WF-w7z" id="gek-KJ-Izy"/>
                         <segue destination="OzT-MM-Hhz" kind="show" identifier="PtoASegue" animates="NO" id="2bQ-5a-oRZ"/>
                         <segue destination="WVU-lF-3gY" kind="show" identifier="PtoTSegue" animates="NO" id="H6P-h6-TTe"/>
                         <segue destination="Klv-z0-CRR" kind="show" identifier="PtoAddPointSegue" id="2Fl-Bh-8iE"/>
@@ -454,7 +469,6 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnAboutOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hxc-AE-ZiQ"/>
                                             <action selector="btnAboutOnPress:" destination="WVU-lF-3gY" eventType="touchUpInside" id="LUj-Kk-gZM"/>
                                         </connections>
                                     </button>
@@ -480,6 +494,9 @@
                                         <state key="normal" title="Add Member">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnAddMemberOnPress:" destination="WVU-lF-3gY" eventType="touchUpInside" id="hcp-qB-MlC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84771573604060912" green="0.84771573604060912" blue="0.84771573604060912" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -490,7 +507,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="68" id="NaG-SY-NZo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="68" id="NaG-SY-NZo" customClass="MemberTableViewCell" customModule="scavenger_hunt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NaG-SY-NZo" id="Lsr-rC-lUK">
@@ -515,6 +532,10 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnMemberRemove" destination="s6b-ay-AvR" id="UEo-96-tll"/>
+                                            <outlet property="lblMemberName" destination="hnX-vj-Moc" id="Nej-Cb-Lng"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -524,8 +545,10 @@
                     </view>
                     <connections>
                         <outlet property="btnAbout" destination="IQY-9B-WoB" id="ImN-bb-x3C"/>
+                        <outlet property="btnAddMember" destination="DXF-SW-ZfM" id="UN3-3q-cyK"/>
                         <outlet property="btnPoints" destination="h21-ig-wKt" id="FhH-g5-gGa"/>
                         <outlet property="btnTeam" destination="kOd-aA-zfT" id="Mo8-aA-BcW"/>
+                        <outlet property="txtEmail" destination="T3U-tI-edy" id="03B-yC-KOH"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="TtoPSegue" animates="NO" id="JcI-uF-SYD"/>
                         <segue destination="OzT-MM-Hhz" kind="show" identifier="TtoASegue" animates="NO" id="WYw-os-Sae"/>
                         <segue destination="Owo-7P-7Uj" kind="show" identifier="toMemberSegue" id="RbC-Sp-xQG"/>
@@ -555,6 +578,9 @@
                                         <state key="normal" title="Points">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnPointsOnPress:" destination="Owo-7P-7Uj" eventType="touchUpInside" id="YkA-41-Kb3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY2-lx-nnP">
                                         <rect key="frame" x="137" y="6" width="132" height="83"/>
@@ -565,7 +591,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnTeaOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3J-fz-6Hv"/>
+                                            <action selector="btnTeamOnPress:" destination="Owo-7P-7Uj" eventType="touchUpInside" id="NDZ-gc-ds4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-Mf-QgH">
@@ -577,7 +603,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnAboutOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vga-mZ-Nkt"/>
+                                            <action selector="btnAboutOnPress:" destination="Owo-7P-7Uj" eventType="touchUpInside" id="mtS-wY-uGR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -626,9 +652,15 @@
                     </view>
                     <connections>
                         <outlet property="MemberNameView" destination="JUH-gQ-2Gb" id="sNS-Yg-rua"/>
+                        <outlet property="btnAbout" destination="oDo-Mf-QgH" id="p3N-Kk-AWb"/>
+                        <outlet property="btnPoints" destination="yFF-T3-tHO" id="wBU-vP-zFC"/>
+                        <outlet property="btnSend" destination="KPC-cj-VmC" id="jbs-Tb-wOt"/>
+                        <outlet property="btnTeam" destination="KY2-lx-nnP" id="9Sz-uu-lcB"/>
+                        <outlet property="lblMemberName" destination="yKL-zU-XOW" id="LuV-w0-Oj9"/>
+                        <outlet property="txtMessage" destination="WHq-al-QBN" id="b3m-qG-Cbw"/>
                         <segue destination="WVU-lF-3gY" kind="show" identifier="toTeamSegue" animates="NO" id="CpG-mC-RBT"/>
                         <segue destination="OzT-MM-Hhz" kind="show" identifier="toAboutSegue" animates="NO" id="8rc-2r-7mL"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toPointsSegue" animates="NO" id="GpE-a6-clM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toPointsSegue" animates="NO" id="WCv-rt-Wbe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLW-cY-78Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -679,9 +711,6 @@
                                         <state key="normal" title="About">
                                             <color key="titleColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                         </state>
-                                        <connections>
-                                            <action selector="btnAboutOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMW-IY-DSa"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -747,8 +776,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b8R-Xf-jV4"/>
-        <segue reference="WqE-mv-Gi4"/>
-        <segue reference="etM-QT-9LR"/>
+        <segue reference="2bQ-5a-oRZ"/>
+        <segue reference="H6P-h6-TTe"/>
+        <segue reference="WCv-rt-Wbe"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184985F9262358D40038556C /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184985F8262358D40038556C /* Member.swift */; };
+		184985FB262359CC0038556C /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184985FA262359CC0038556C /* MemberTableViewCell.swift */; };
+		184985FD26235AC10038556C /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184985FC26235AC10038556C /* MemberTableViewController.swift */; };
+		18B7ADED262231E4008F4A43 /* PointTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7ADEC262231E4008F4A43 /* PointTableViewController.swift */; };
 		18CDF2FF2611403B006D845D /* AddPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDF2FE2611403B006D845D /* AddPointViewController.swift */; };
 		18CDF301261147C1006D845D /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDF300261147C1006D845D /* PointViewController.swift */; };
 		18CDF30326114E67006D845D /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDF30226114E67006D845D /* MemberViewController.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184985F8262358D40038556C /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		184985FA262359CC0038556C /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		184985FC26235AC10038556C /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
+		18B7ADEC262231E4008F4A43 /* PointTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointTableViewController.swift; sourceTree = "<group>"; };
 		18CDF2FE2611403B006D845D /* AddPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPointViewController.swift; sourceTree = "<group>"; };
 		18CDF300261147C1006D845D /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 		18CDF30226114E67006D845D /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +92,10 @@
 				18CDF300261147C1006D845D /* PointViewController.swift */,
 				18CDF30226114E67006D845D /* MemberViewController.swift */,
 				18CDF30426115256006D845D /* Point.swift */,
+				18B7ADEC262231E4008F4A43 /* PointTableViewController.swift */,
+				184985F8262358D40038556C /* Member.swift */,
+				184985FA262359CC0038556C /* MemberTableViewCell.swift */,
+				184985FC26235AC10038556C /* MemberTableViewController.swift */,
 			);
 			path = scavenger_hunt;
 			sourceTree = "<group>";
@@ -162,12 +174,16 @@
 				18CDF30326114E67006D845D /* MemberViewController.swift in Sources */,
 				18DE38D4260FFCAC00C2D5A6 /* AboutViewController.swift in Sources */,
 				18DE38D62610044D00C2D5A6 /* TeamViewController.swift in Sources */,
+				184985FD26235AC10038556C /* MemberTableViewController.swift in Sources */,
 				18DE38C0260FE3BF00C2D5A6 /* ViewController.swift in Sources */,
 				18DE38D8261016F500C2D5A6 /* PointTableViewCell.swift in Sources */,
 				18CDF2FF2611403B006D845D /* AddPointViewController.swift in Sources */,
+				184985FB262359CC0038556C /* MemberTableViewCell.swift in Sources */,
 				18CDF30526115256006D845D /* Point.swift in Sources */,
+				184985F9262358D40038556C /* Member.swift in Sources */,
 				18CDF301261147C1006D845D /* PointViewController.swift in Sources */,
 				18DE38DA26101BF700C2D5A6 /* RatingControl.swift in Sources */,
+				18B7ADED262231E4008F4A43 /* PointTableViewController.swift in Sources */,
 				18DE38BE260FE3BF00C2D5A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,24 @@ import UIKit
 class MemberViewController: UIViewController {
 
     @IBOutlet var MemberNameView: UIView!
+    @IBOutlet weak var lblMemberName: UILabel!
+    @IBOutlet weak var txtMessage: UITextView!
+    @IBOutlet weak var btnSend: UIButton!
+    @IBOutlet weak var btnPoints: UIButton!
+    @IBAction func btnPointsOnPress(_ sender: Any) {
+        txtMessage.text = ""
+        performSegue(withIdentifier: "toPointsSegue", sender: self)
+    }
+    @IBOutlet weak var btnTeam: UIButton!
+    @IBAction func btnTeamOnPress(_ sender: Any) {
+        txtMessage.text = ""
+        performSegue(withIdentifier: "toTeamSegue", sender: self)
+    }
+    @IBOutlet weak var btnAbout: UIButton!
+    @IBAction func btnAboutOnPress(_ sender: Any) {
+        txtMessage.text = ""
+        performSegue(withIdentifier: "toAboutSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         MemberNameView.layer.borderWidth = 1

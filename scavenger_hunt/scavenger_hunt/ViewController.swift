@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet var btnAddPoint: UIButton!
     @IBAction func btnAddPointOnPress(_ sender: Any) {
+        txtSearch.text = ""
         performSegue(withIdentifier: "PtoAddPointSegue", sender: self)
     }
     @IBOutlet weak var pointsTableView: UITableView!
@@ -19,10 +21,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btnTeam: UIButton!
     @IBAction func btnTeaOnPress(_ sender: Any) {
+        txtSearch.text = ""
         performSegue(withIdentifier: "PtoTSegue", sender: self)
     }
     @IBOutlet weak var btnAbout: UIButton!
     @IBAction func btnAboutOnPress(_ sender: Any) {
+        txtSearch.text = ""
         performSegue(withIdentifier: "PtoASegue", sender: self)
     }
     

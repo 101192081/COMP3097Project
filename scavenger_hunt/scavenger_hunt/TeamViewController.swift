@@ -10,13 +10,20 @@ import UIKit
 
 class TeamViewController: UIViewController {
 
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var btnAddMember: UIButton!
+    @IBAction func btnAddMemberOnPress(_ sender: Any) {
+        txtEmail.text = ""
+    }
     @IBOutlet weak var btnPoints: UIButton!
     @IBAction func btnPointsOnPress(_ sender: Any) {
+        txtEmail.text = ""
         performSegue(withIdentifier: "TtoPSegue", sender: self)
     }
     @IBOutlet weak var btnTeam: UIButton!
     @IBOutlet weak var btnAbout: UIButton!
     @IBAction func btnAboutOnPress(_ sender: Any) {
+        txtEmail.text = ""
         performSegue(withIdentifier: "TtoASegue", sender: self)
     }
     override func viewDidLoad() {
